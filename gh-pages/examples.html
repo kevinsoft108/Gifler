@@ -40,62 +40,17 @@
               <script>
                 var url = "assets/gif/nyan.gif";
                 var selector = ".nyancat";
-                gifler(url).animate(document.querySelector('canvas' + selector));
+                var gif = gifler(url);
+                gif.animate(document.querySelector('canvas' + selector));
                 document.querySelector('img' + selector).src = url;
-                
-              </script>
-            </td>
-          </tr>
-          <tr>
-            <td><img class="florian"/></td>
-            <td>
-              <canvas class="florian"></canvas>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <div class="source">Source: Florian de Looij</div>
-              <script>
-                var url = "assets/gif/florian-8.gif";
-                var selector = ".florian";
-                gifler(url).animate(document.querySelector('canvas' + selector));
-                document.querySelector('img' + selector).src = url;
-                
-              </script>
-            </td>
-          </tr>
-          <tr>
-            <td><img class="pots"/></td>
-            <td>
-              <canvas class="pots"></canvas>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <div class="source">Source: http://www.weshootfood.net/</div>
-              <script>
-                var url = "assets/gif/pots.gif";
-                var selector = ".pots";
-                gifler(url).animate(document.querySelector('canvas' + selector));
-                document.querySelector('img' + selector).src = url;
-                
-              </script>
-            </td>
-          </tr>
-          <tr>
-            <td><img class="toroid"/></td>
-            <td>
-              <canvas class="toroid"></canvas>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <div class="source">Source: David Ope</div>
-              <script>
-                var url = "assets/gif/toroid.gif";
-                var selector = ".toroid";
-                gifler(url).animate(document.querySelector('canvas' + selector));
-                document.querySelector('img' + selector).src = url;
+
+                setTimeout(function(){
+                  gif.stop()
+                  url = "assets/gif/florian-8.gif";
+                  gif = gifler(url);
+                  gif.animate(document.querySelector('canvas' + selector));
+                  document.querySelector('img' + selector).src = url;
+                }, 20000);
                 
               </script>
             </td>

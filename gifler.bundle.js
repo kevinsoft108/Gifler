@@ -118,6 +118,12 @@ Gif = (function() {
     return this._animatorPromise;
   };
 
+  Gif.prototype.stop = function(callback) {
+    return this._animatorPromise.then(function(animator) {
+      return animator.stop()
+    });
+  };
+
   return Gif;
 
 })();
